@@ -13,7 +13,10 @@ Image: Container-Optimized OS
 Startup Script:
 
 ```bash
-git clone https://github.com/acomagu/gadgets . \
-&& docker run google/cloud-sdk gcloud kms decrypt --location global --keyring gadgets --key docker-compose_secret_yml --ciphertext-file - --plaintext-file - <docker-compose.secret.yml.enc >docker-compose.secret.yml \
-&& docker run -v /var/run/docker.sock:/var/run/docker.sock -v $PWD:/tmp/home docker/compose:1.23.2 -f/tmp/home/docker-compose.{yml,secret.yml} up
+mkdir -p /run/startup \
+&& cd /run/startup \
+&& git clone https://github.com/acomagu/gadgets \
+&& cd gadgets \
+&& docker run -i google/cloud-sdk gcloud kms decrypt --location global --keyring gadgets --key docker-compose_secret_yml --ciphertext-file - --plaintext-file - <docker-compose.secret.yml.enc >docker-compose.secret.yml \
+&& docker run -v /var/run/docker.sock:/var/run/docker.sock -v $PWD:/tmp/home docker/compose:1.23.2 -f/tmp/home/docker-compose.{yml,secret.yml,gce.yml} up -d
 ```
