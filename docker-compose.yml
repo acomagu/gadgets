@@ -1,4 +1,16 @@
-version: "3"
+version: '3'
 services:
   dicebot:
     image: acomagu/dicebot
+    restart: always
+  graphdb:
+    image: acomagu/graphdb:8.8.1-free
+    restart: always
+    expose:
+      - '7200'
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
