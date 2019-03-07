@@ -2,10 +2,8 @@ version: '3'
 services:
   dicebot:
     image: acomagu/dicebot
-    restart: always
   graphdb:
     image: acomagu/graphdb:8.8.1-free
-    restart: always
     expose:
       - '7200'
   nginx:
