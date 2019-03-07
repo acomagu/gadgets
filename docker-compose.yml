@@ -6,6 +6,7 @@ services:
     image: acomagu/graphdb:8.8.1-free
     expose:
       - '7200'
+    command: ['-Xms128m', '-Xmx128m']
   nginx:
     image: nginx
     volumes:
