@@ -9,3 +9,6 @@ services:
   abccal:
     logging:
       driver: gcplogs
+  nginx:
+    logging:
+      driver: gcplogs
