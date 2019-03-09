@@ -3,3 +3,9 @@ services:
   dicebot:
     logging:
       driver: gcplogs
+  graphdb:
+    logging:
+      driver: gcplogs
+  abccal:
+    logging:
+      driver: gcplogs

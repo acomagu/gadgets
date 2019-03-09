@@ -1,5 +1,9 @@
 version: '3'
 services:
+  abccal:
+    build: abccal
+    expose:
+      - '80'
   dicebot:
     image: acomagu/dicebot
   graphdb:
