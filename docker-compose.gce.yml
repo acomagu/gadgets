@@ -6,6 +6,8 @@ services:
   graphdb:
     logging:
       driver: gcplogs
+    volumes:
+      - /mnt/disks/gadgets-persistent/graphdb/home:/opt/graphdb/home
   abccal:
     logging:
       driver: gcplogs
