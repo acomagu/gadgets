@@ -10,7 +10,7 @@ services:
     image: acomagu/graphdb:8.8.1-free
     expose:
       - '7200'
-    command: ['-Dgraphdb.home=/opt/graphdb/home', '-Xms128m', '-Xmx128m']
+    command: ['-Dgraphdb.home=/opt/graphdb/home', '-Xms128m', '-Xmx512m']
   nginx:
     image: nginx
     volumes:
