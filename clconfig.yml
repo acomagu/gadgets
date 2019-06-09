@@ -9,8 +9,8 @@ storage:
       contents:
         inline: |
           #!/usr/bin/env bash
-          export DOCKER_CLIENT_TIMEOUT=120
-          && export COMPOSE_HTTP_TIMEOUT=120
+          export DOCKER_CLIENT_TIMEOUT=120 \
+          && export COMPOSE_HTTP_TIMEOUT=120 \
           && mkdir -p /run/startup \
           && cd /run/startup \
           && git clone https://github.com/acomagu/gadgets \
