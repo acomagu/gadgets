@@ -1,5 +1,7 @@
 version: '3'
 services:
+  musicbot:
+    image: acomagu/musicbot
   abccal:
     build: abccal
     expose:
