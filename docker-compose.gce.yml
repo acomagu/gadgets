@@ -1,5 +1,8 @@
 version: "3"
 services:
+  musicbot:
+    logging:
+      driver: gcplogs
   dicebot:
     logging:
       driver: gcplogs
