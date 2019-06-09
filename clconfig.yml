@@ -69,6 +69,8 @@ systemd:
       contents: |
         [Unit]
         Requires=mnt-disks-gadgets\x2dpersistent.mount
+        Wants=network-online.target
+        After=network-online.target
 
         [Service]
         ExecStart=/opt/startup-script/startup-script
