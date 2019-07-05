@@ -63,6 +63,9 @@ systemd:
 
         [Install]
         RequiredBy=local-fs.target
+    # Enable systemd-resolved
+    - name: systemd-resolved.service
+      enabled: true
     # Startup script
     - name: startup-script.service
       enabled: true
