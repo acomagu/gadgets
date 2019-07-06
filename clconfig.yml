@@ -13,6 +13,7 @@ storage:
           && export COMPOSE_HTTP_TIMEOUT=120 \
           && mkdir -p /run/startup \
           && cd /run/startup \
+          && rm -rf gadgets \
           && git clone https://github.com/acomagu/gadgets \
           && cd gadgets \
           && docker run -i google/cloud-sdk gcloud kms decrypt --location global --keyring gadgets --key docker-compose_secret_yml --ciphertext-file - --plaintext-file - <docker-compose.secret.yml.enc >docker-compose.secret.yml \
