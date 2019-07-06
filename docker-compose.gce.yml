@@ -6,14 +6,6 @@ services:
   dicebot:
     logging:
       driver: gcplogs
-  graphdb:
-    logging:
-      driver: gcplogs
-    volumes:
-      - /mnt/disks/gadgets-persistent/graphdb/home:/opt/graphdb/home
-  abccal:
-    logging:
-      driver: gcplogs
   nginx:
     logging:
       driver: gcplogs
