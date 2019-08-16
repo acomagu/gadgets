@@ -10,3 +10,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
+  cloud-torrent:
+    image: jpillora/cloud-torrent
+    expose:
+      - '3000'

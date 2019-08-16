@@ -9,3 +9,8 @@ services:
   nginx:
     logging:
       driver: gcplogs
+  cloud-torrent:
+    logging:
+      driver: gcplogs
+    volumes:
+      - /mnt/disks/gadgets-persistent/cloud-torrent:/downloads
